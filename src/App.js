@@ -1,10 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
 
+//函数式组件
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <div>这是appjsx</div>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -20,6 +22,12 @@ function App() {
       </header>
     </div>
   );
+}
+
+function deepClone(arr){
+  let _obj = JSON.stringify(arr),
+      objClone = JSON.parse(_obj)
+  return objClone
 }
 
 export default App;
